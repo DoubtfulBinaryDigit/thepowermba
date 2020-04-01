@@ -69,11 +69,17 @@ button .box {
 
   display: flex;
   flex-direction: row;
+  align-items: center;
+
+  .checkbox {
+    width: 5%;
+  }
 
   .data {
-    width: 95%;
+    width: 90%;
     display: flex;
     flex-direction: column;
+    padding-left: 1rem;
 
     h3 {
       font-size: 2rem;
@@ -86,6 +92,5 @@ button .box {
 
   .remove {
     width: 5%;
-    align-self: end;
   }
 }

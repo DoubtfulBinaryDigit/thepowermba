@@ -1,0 +1,66 @@
+@import 'variables.scss';
+
+$checkSize: 1.5rem;
+
+.checkbox {
+  height: $checkSize;
+  width: $checkSize;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  height: $checkSize;
+  width: $checkSize;
+}
+.checkbox label {
+  position: absolute;
+  display: inline-block;
+  padding-left: $checkSize;
+  background: $backgroundColor;
+  box-shadow: $active;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+  top:0px;
+  position: absolute;
+  content: "";
+  display: inline-block;
+}
+.checkbox label::before{
+  height: $checkSize;
+  width: $checkSize;
+  border: none;
+  outline: none;
+  color: $textColor;
+  cursor: pointer;
+  box-shadow: $released;
+  border-radius: $checkSize/2;
+  left: 0px;
+  top: 0px;
+}
+
+.checkbox label::after {
+  height: $checkSize;
+  width: $checkSize;
+  border: none;
+  outline: none;
+  color: $textColor;
+  cursor: pointer;
+  border-radius: $checkSize/2;
+  
+  left: 0px;
+  top: 0px;
+}
+
+.checkbox input[type="checkbox"] + label::after {
+  content: none;
+}
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: "";
+  box-shadow: $inside;
+}
+.checkbox input[type="checkbox"]:focus + label::before {
+  // box-shadow: $active;
+}

@@ -1,6 +1,7 @@
 @import 'reset.css';
 @import 'variables.scss';
 @import 'icons.scss';
+@import 'checkbox.scss';
 @import 'elements.scss';
 
 body {
@@ -19,8 +20,7 @@ code {
 
 .app {
   display: flex;
+  max-width: 1500px;
   padding: 2rem;
   justify-content: center;
-  // align-items: center;
-  height: 100vh;
 }

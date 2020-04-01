@@ -7,6 +7,10 @@ const Movie = ({ movie }) => {
 
   return (
     <div className="box card">
+      <div className="checkbox">
+        <input type="checkbox" id={'watched-' + title} />
+        <label for={'watched-' + title} />
+      </div>
       <div className="data">
         <h3>{title}</h3>
         <p>{genres}</p>
