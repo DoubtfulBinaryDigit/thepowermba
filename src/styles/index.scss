@@ -1,0 +1,26 @@
+@import 'reset.css';
+@import 'variables.scss';
+@import 'icons.scss';
+@import 'elements.scss';
+
+body {
+  margin: 0;
+  font-family: $main-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: $backgroundColor;
+  color: $textColor;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  // align-items: center;
+  height: 100vh;
+}

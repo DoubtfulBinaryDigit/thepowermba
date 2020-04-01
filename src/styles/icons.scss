@@ -1,0 +1,31 @@
+$closeSize: 1.5rem;
+
+#close {
+  width: $closeSize;
+  height: $closeSize;
+
+  &:hover {
+    .c {
+      box-shadow: $released;
+    }
+  }
+}
+
+.c {
+  height: $closeSize;
+  width: 2px;
+  background-color: $textColor;
+  border-radius: 1px;
+  box-shadow: $active;
+}
+
+.c1 {
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.c2 {
+  transform: rotate(90deg);
+  z-index: 2;
+  box-shadow: $active;
+}

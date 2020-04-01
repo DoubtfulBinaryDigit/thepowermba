@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+$main-font: 'Karla', sans-serif;
+
+$backgroundColor: #d5e1ed;
+$textColor: #a2abde;
+
+$shadowColor: rgba(135, 165, 190, 0.5);
+$lightColor: #ffffff;
+$gradient: linear-gradient(145deg, #cedbed, #fafcfd);
+
+$tense: 4px 2px 16px $shadowColor, -4px -2px 16px $lightColor;
+$inside: inset 4px 2px 8px $shadowColor, inset -4px -2px 8px $lightColor;
+
+$released: 4px 2px 16px $shadowColor, -4px -2px 16px $lightColor;
+$pressed: 1px 1px 4px $shadowColor, -1px -1px 4px $lightColor;
+$active: inset 2px 1px 4px $shadowColor, inset -2px -1px 4px $lightColor;
