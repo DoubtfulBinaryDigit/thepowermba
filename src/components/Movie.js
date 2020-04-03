@@ -8,12 +8,12 @@ const Movie = ({ movie }) => {
   return (
     <div className="box card">
       <div className="checkbox">
-        <input type="checkbox" id={'watched-' + title} />
+        <input type="checkbox" id={'watched-' + title} checked={watched} onChange={() => dispatch({ type: 'TOGGLE_WATCHED', payload: movie })}/>
         <label for={'watched-' + title} />
       </div>
       <div className="data">
         <h3>{title}</h3>
-        <p>{genres}</p>
+        <p>{genres && genres.map(g => <span>#{g} </span>)}</p>
       </div>
       <button
         className="neu remove"

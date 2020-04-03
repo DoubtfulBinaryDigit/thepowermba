@@ -14,11 +14,13 @@ const MovieInput = ({ addToList }) => {
   };
 
   const onKeyDown = ({ key, target }) => {
-    const newGenre = target.value.trim().toLowerCase()
-    if (key === 'Enter' && newGenre !== '' && newGenre !== 'horror') {
+    const newGenre = target.value.trim().toLowerCase();
+    const validGenre = newGenre !== '' && newGenre !== 'horror';
+    const exists = genres.includes(newGenre);
+    if (key === 'Enter' && validGenre && !exists) {
       setGenres([...genres, newGenre]);
-      setCurrGenre('')
     }
+    setCurrGenre('');
   };
 
   return (
@@ -40,7 +42,6 @@ const MovieInput = ({ addToList }) => {
           value={currGenre}
           onKeyDown={onKeyDown}
           onChange={e => setCurrGenre(e.target.value)}
-      
         />
         <p>{genres && genres.map(g => <span>#{g} </span>)}</p>
       </div>
