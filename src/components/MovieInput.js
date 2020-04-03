@@ -7,7 +7,8 @@ const MovieInput = ({ addToList }) => {
 
   const addMovie = () => {
     if (title !== '' && genres !== '') {
-      addToList({ title, genres });
+      const newMovie = { title, genres };
+      addToList(newMovie);
       setTitle('');
       setGenres([]);
     }
