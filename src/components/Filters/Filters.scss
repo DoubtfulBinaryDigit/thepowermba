@@ -23,6 +23,7 @@
     }
   }
 }
+
 .radioInputs {
   width: calc(#{$columnWidth} - #{$buttonWidth});
   display: flex;
@@ -30,13 +31,12 @@
   align-content: center;
 
   input {
-    box-shadow: $active;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     align-self: center;
   }
   label {
-    margin-right: 1rem;
+   
     align-self: center;
   }
 }
