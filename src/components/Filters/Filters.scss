@@ -7,6 +7,9 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  @media (max-width: 450px) {
+    /* s */
+  }
 
   button {
     width: $buttonWidth;
@@ -15,6 +18,12 @@
     background: $gradient;
     box-shadow: $released;
     font-size: 0.75rem;
+    @media (max-width: 450px) {
+      width: 20%;
+      padding: 1.25rem 0;
+      height: auto;
+      margin: 0;
+    }
     &:hover {
       box-shadow: $pressed;
     }
@@ -29,6 +38,9 @@
   display: flex;
   flex-direction: row;
   align-content: center;
+  @media (max-width: 450px) {
+    width: 80%;
+  }
 
   input {
     padding-top: 0.6rem;
@@ -36,7 +48,6 @@
     align-self: center;
   }
   label {
-   
     align-self: center;
   }
 }

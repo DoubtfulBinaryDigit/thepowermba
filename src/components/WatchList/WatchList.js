@@ -38,7 +38,7 @@ const WatchList = ({ match }) => {
         <Search />
         <Filters setFilter={setFilter} filter={filter} />
       </div>
-      <div className="feed">>
+      <div className="feed">
       {loading ? <Loader /> : <MovieList movies={movies} filter={filter} search={search} />}
       </div>
     </div>

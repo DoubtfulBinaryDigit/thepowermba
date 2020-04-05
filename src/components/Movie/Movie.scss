@@ -1,7 +1,5 @@
 @import '../../styles/variables.scss';
 
-
-
 .iconButton {
   background: none;
 }
@@ -20,10 +18,13 @@
 
 .card {
   width: $columnWidth;
-  width: calc(#{$columnWidth} - 2rem);
+  // width: calc(#{$columnWidth} - 2rem);
   margin-top: 1rem;
   background: none;
   box-shadow: $inside;
+  @media (max-width: 450px) {
+    width: calc(100% - 2rem);
+  }
 
   display: flex;
   flex-direction: row;
@@ -55,8 +56,6 @@
   }
 }
 
-
-
 $checkSize: 1.5rem;
 
 .checkbox {
@@ -64,7 +63,7 @@ $checkSize: 1.5rem;
   width: $checkSize;
 }
 
-.checkbox input[type="checkbox"] {
+.checkbox input[type='checkbox'] {
   opacity: 0;
   position: absolute;
   height: $checkSize;
@@ -80,12 +79,12 @@ $checkSize: 1.5rem;
 
 .checkbox label::before,
 .checkbox label::after {
-  top:0px;
+  top: 0px;
   position: absolute;
-  content: "";
+  content: '';
   display: inline-block;
 }
-.checkbox label::before{
+.checkbox label::before {
   height: $checkSize;
   width: $checkSize;
   border: none;
@@ -106,16 +105,16 @@ $checkSize: 1.5rem;
   color: $primaryColor;
   cursor: pointer;
   border-radius: $checkSize/2;
-  
+
   left: 0px;
   top: 0px;
 }
 
-.checkbox input[type="checkbox"] + label::after {
+.checkbox input[type='checkbox'] + label::after {
   content: none;
 }
-.checkbox input[type="checkbox"]:checked + label::after {
-  content: "";
+.checkbox input[type='checkbox']:checked + label::after {
+  content: '';
   box-shadow: $inside;
   background-color: $primaryColor;
 }

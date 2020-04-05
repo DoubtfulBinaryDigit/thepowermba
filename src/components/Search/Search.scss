@@ -9,7 +9,6 @@
   align-content: center;
 
   input {
-    // width: $columnWidth;
     width: calc(#{$columnWidth} - 2 * 1rem);
     box-shadow: $active;
     padding-top: 0.6rem;

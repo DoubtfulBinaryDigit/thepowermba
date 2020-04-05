@@ -12,6 +12,11 @@ $radioSize: 30px;
   display: flex;
   flex-direction: row;
 
+  @media (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .radio {
     appearance: none;
     cursor: pointer;
@@ -45,4 +50,8 @@ $radioSize: 30px;
 .text {
   margin-right: 1rem;
   align-self: center;
+  @media (max-width: 450px) {
+    margin-right: 0.5rem;
+    font-size: 13px;
+  }
 }
