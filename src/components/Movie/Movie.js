@@ -65,8 +65,3 @@ const Movie = ({ movie }) => {
 };
 
 export default Movie;
-
-/* heckbox that shows if movie is watched or not.
-Movie name.
-Genres.
-Delete button. */

@@ -9,17 +9,16 @@
   align-content: center;
 
   button {
-    width: $buttonWidth;
-    padding: 0.7rem 1.25rem 0.7rem 1.25rem;
+    width: 20%;
+    padding: 1.25rem 0;
     margin-left: 1rem;
     background: $gradient;
     box-shadow: $released;
     font-size: 0.75rem;
-    @media (max-width: 450px) {
-      width: 20%;
-      padding: 1.25rem 0;
-      height: auto;
-      margin: 0;
+    margin: 0;
+    @media (min-width: 450px) {
+      width: $buttonWidth;
+      padding: 0.7rem 1.25rem;
     }
     &:hover {
       box-shadow: $pressed;
@@ -31,12 +30,12 @@
 }
 
 .radioInputs {
-  width: calc(#{$columnWidth} - #{$buttonWidth});
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-content: center;
-  @media (max-width: 450px) {
-    width: 80%;
+  @media (min-width: 450px) {
+    width: calc(#{$columnWidth} - #{$buttonWidth});
   }
 
   input {

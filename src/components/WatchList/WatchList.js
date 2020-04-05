@@ -33,7 +33,7 @@ const WatchList = ({ match }) => {
 
   return (
     <div className="main">
-      <div class="actions">
+      <div className="actions">
         <MovieInput addToList={movie => dispatch({ type: 'ADD_MOVIE', payload: movie })} />
         <Search />
         <Filters setFilter={setFilter} filter={filter} />

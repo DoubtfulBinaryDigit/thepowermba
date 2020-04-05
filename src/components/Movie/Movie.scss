@@ -17,13 +17,12 @@
 }
 
 .card {
-  width: $columnWidth;
-  // width: calc(#{$columnWidth} - 2rem);
+  width: calc(100% - 2rem);
   margin-top: 1rem;
   background: none;
   box-shadow: $inside;
-  @media (max-width: 450px) {
-    width: calc(100% - 2rem);
+  @media (min-width: 450px) {
+    width: $columnWidth;
   }
 
   display: flex;
