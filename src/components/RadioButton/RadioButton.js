@@ -7,7 +7,6 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 const RadioButton = ({ name, setFilter, filter }) => {
   const checked = filter === name;
 
-  console.log('RadioButton', filter, name, checked);
   return (
     <Fragment>
       <label className="label" htmlFor={name}>

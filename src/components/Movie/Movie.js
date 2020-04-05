@@ -36,7 +36,7 @@ const Movie = ({ movie }) => {
 
       <div className="data">
         {editMode ? (
-          <input type="text" onChange={e => setMovieTitle(e.target.value)} />
+          <input type="text" className="neu" value={title} onChange={e => setMovieTitle(e.target.value)} />
         ) : (
           <h3>{title}</h3>
         )}
