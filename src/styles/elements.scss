@@ -3,94 +3,12 @@
 .neu {
   border: none;
   outline: none;
-  color: $textColor;
+  color: $primaryColor;
   cursor: pointer;
 }
 
 .box {
   border-radius: 1rem;
-  padding: 1.25rem;
-  font-size: 0.75rem;
-  margin-left: 1.5rem;
-}
-
-input {
-  background: none;
-  transition: all 0.2s ease-in-out;
-  box-shadow: $tense;
-  &:hover {
-    box-shadow: $inside;
-  }
-  &:focus {
-    box-shadow: $inside;
-  }
-}
-
-button .box {
-  padding: 1.77rem;
-  background: $gradient;
-  box-shadow: $released;
-  &:hover {
-    box-shadow: $pressed;
-  }
-  &:active {
-    box-shadow: $active;
-  }
-}
-
-.add {
-  padding: 1.25rem;
-  background: $gradient;
-  box-shadow: $released;
-  &:hover {
-    box-shadow: $pressed;
-  }
-  &:active {
-    box-shadow: $active;
-  }
-}
-
-.remove {
-  background: none;
-  /*   width: 0.5rem;
-  height: 0.5rem;
-  padding: 0.1rem;
-  border-radius: 0.25rem; */
-}
-
-
-
-.card {
-  width: 100%;
-  padding: 1.77rem;
-  margin-top: 1rem;
-  background: none;
-  box-shadow: $inside;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  .checkbox {
-    width: 5%;
-  }
-
-  .data {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 1rem;
-
-    h3 {
-      font-size: 2rem;
-      color: $textColor;
-    }
-    p {
-      font-size: 1rem;
-    }
-  }
-
-  .remove {
-    width: 5%;
-  }
+  padding: 1.5rem;
+  font-size: 0.9rem;
 }

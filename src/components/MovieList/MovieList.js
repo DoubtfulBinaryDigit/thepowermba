@@ -1,5 +1,6 @@
 import React from 'react';
-import Movie from './Movie';
+import Movie from '../Movie/Movie';
+import './MovieList.scss';
 
 const MovieList = ({ movies, filter, search }) => {
   const sortedMovies = movies
@@ -10,9 +11,11 @@ const MovieList = ({ movies, filter, search }) => {
     : sortedMovies;
 
   const searchedMovies =
-    search !== '' ? filteredMovies.filter(m => m.title.toLowerCase().includes(search)) : filteredMovies;
+    search !== ''
+      ? filteredMovies.filter(m => m.title.toLowerCase().includes(search))
+      : filteredMovies;
 
-  return searchedMovies.map((movie, i) => <Movie key={`${movie.title}-${i}`} movie={movie} />);
+  return (<div className="list">{searchedMovies.map((movie, i) => <Movie key={`${movie.title}-${i}`} movie={movie} />)}</div>);
 };
 
 export default MovieList;

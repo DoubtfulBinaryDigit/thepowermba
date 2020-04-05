@@ -1,15 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Watchlist from './components/Watchlist';
+import Watchlist from './components/WatchList/WatchList';
 
 function App() {
   return (
-    <div className="app">
-      <Switch>
-        <Route path="/" render={() => <Watchlist />} />
-      </Switch>
-    </div>
+    <Switch>
+      <Route path="/genre=:g" render={({ match }) => <Watchlist match={match} />} />
+      <Route path="/" exact render={() => <Watchlist />} />
+    </Switch>
   );
 }
 

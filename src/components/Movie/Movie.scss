@@ -1,4 +1,61 @@
-@import 'variables.scss';
+@import '../../styles/variables.scss';
+
+
+
+.iconButton {
+  background: none;
+}
+
+.editIcon {
+  font-size: 20px;
+}
+
+.saveIcon {
+  font-size: 23px;
+}
+
+.closeIcon {
+  font-size: 30px;
+}
+
+.card {
+  width: $columnWidth;
+  width: calc(#{$columnWidth} - 2rem);
+  margin-top: 1rem;
+  background: none;
+  box-shadow: $inside;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .checkbox {
+    width: 5%;
+  }
+
+  .data {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+
+    h3 {
+      font-size: 2rem;
+      color: $primaryColor;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .editButtons {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
 
 $checkSize: 1.5rem;
 
@@ -17,7 +74,7 @@ $checkSize: 1.5rem;
   position: absolute;
   display: inline-block;
   padding-left: $checkSize;
-  background: $backgroundColor;
+  background: $secundaryColor;
   box-shadow: $active;
 }
 
@@ -33,7 +90,7 @@ $checkSize: 1.5rem;
   width: $checkSize;
   border: none;
   outline: none;
-  color: $textColor;
+  color: $primaryColor;
   cursor: pointer;
   box-shadow: $released;
   border-radius: $checkSize/2;
@@ -46,7 +103,7 @@ $checkSize: 1.5rem;
   width: $checkSize;
   border: none;
   outline: none;
-  color: $textColor;
+  color: $primaryColor;
   cursor: pointer;
   border-radius: $checkSize/2;
   
@@ -60,7 +117,5 @@ $checkSize: 1.5rem;
 .checkbox input[type="checkbox"]:checked + label::after {
   content: "";
   box-shadow: $inside;
-}
-.checkbox input[type="checkbox"]:focus + label::before {
-  // box-shadow: $active;
+  background-color: $primaryColor;
 }
