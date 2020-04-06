@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import PropTypes from 'prop-types';
 import './MovieInput.scss';
 
 const MovieInput = ({ addToList }) => {
@@ -56,5 +56,11 @@ const MovieInput = ({ addToList }) => {
     </div>
   );
 };
+
+MovieInput.propTypes = {
+  addToList: PropTypes.func
+};
+
+MovieInput.defaultProps = { addToList: null };
 
 export default MovieInput;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Filters.scss';
 import RadioButton from '../RadioButton/RadioButton'
 
@@ -16,6 +17,16 @@ const Filters = ({ setFilter, filter }) => {
       </button>
     </div>
   );
+};
+
+Filters.propTypes = {
+  setFilter: PropTypes.func,
+  filter: PropTypes.string
+};
+
+Filters.defaultProps = {
+  setFilter:null,
+  filter: null
 };
 
 export default Filters;

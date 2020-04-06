@@ -34,7 +34,7 @@ describe('App', () => {
     );
   });
 
-   it('renders <h1></h1>', () => {
+   /* it('renders <h1></h1>', () => {
     expect(wrapper.contains(<h1 className="header"></h1>)).toBe(true);
-  });
+  }); */
 });

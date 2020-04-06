@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import './RadioButton.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,4 +27,14 @@ const RadioButton = ({ name, setFilter, filter }) => {
   );
 };
 
+RadioButton.propTypes = {
+  name: PropTypes.string.isRequired,
+  setFilter: PropTypes.func,
+  filter: PropTypes.string
+};
+
+RadioButton.defaultProps = {
+  setFilter: null,
+  filter: null
+};
 export default RadioButton;

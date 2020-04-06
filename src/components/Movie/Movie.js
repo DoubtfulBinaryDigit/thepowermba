@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
 import './Movie.scss';
@@ -36,7 +37,12 @@ const Movie = ({ movie }) => {
 
       <div className="data">
         {editMode ? (
-          <input type="text" className="neu" value={title} onChange={e => setMovieTitle(e.target.value)} />
+          <input
+            type="text"
+            className="neu"
+            value={title}
+            onChange={e => setMovieTitle(e.target.value)}
+          />
         ) : (
           <h3>{title}</h3>
         )}
@@ -62,6 +68,13 @@ const Movie = ({ movie }) => {
       </div>
     </div>
   );
+};
+
+Movie.propTypes = {
+  movie: PropTypes.object.isRequired
+};
+
+Movie.defaultProps = {
 };
 
 export default Movie;

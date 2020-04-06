@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 
 import './WatchList.scss';
@@ -39,10 +40,17 @@ const WatchList = ({ match }) => {
         <Filters setFilter={setFilter} filter={filter} />
       </div>
       <div className="feed">
-      {loading ? <Loader /> : <MovieList movies={movies} filter={filter} search={search} />}
+        {loading ? <Loader /> : <MovieList movies={movies} filter={filter} search={search} />}
       </div>
     </div>
   );
 };
 
+WatchList.propTypes = {
+  match: PropTypes.object
+};
+
+WatchList.defaultProps = {
+  match: null
+};
 export default WatchList;

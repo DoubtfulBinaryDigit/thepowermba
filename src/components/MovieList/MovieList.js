@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Movie from '../Movie/Movie';
 import './MovieList.scss';
 
@@ -15,7 +16,24 @@ const MovieList = ({ movies, filter, search }) => {
       ? filteredMovies.filter(m => m.title.toLowerCase().includes(search))
       : filteredMovies;
 
-  return (<div className="list">{searchedMovies.map((movie, i) => <Movie key={`${movie.title}-${i}`} movie={movie} />)}</div>);
+  return (
+    <div className="list">
+      {searchedMovies.map((movie, i) => (
+        <Movie key={`${movie.title}-${i}`} movie={movie} />
+      ))}
+    </div>
+  );
 };
 
+MovieList.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.object),
+  filter: PropTypes.string,
+  search: PropTypes.string
+};
+
+MovieList.defaultProps = {
+  movies: [],
+  filter: '',
+  search: ''
+};
 export default MovieList;
